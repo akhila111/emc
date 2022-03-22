@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.reach.utilities.ReadConfig;
@@ -19,7 +20,7 @@ public class BaseClass {
 	
 	@Parameters("browser")
 	@BeforeClass
-	public void openURL(String br) {
+	public void openURL(@Optional("chrome") String br) {
 		if (br.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
 			driver = new ChromeDriver();

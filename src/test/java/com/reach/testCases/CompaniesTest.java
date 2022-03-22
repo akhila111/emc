@@ -25,7 +25,7 @@ public class CompaniesTest extends BaseClass {
 		cp.clickOnAcceptCookiesButton();
 
 		// Looping through all the alphabets and clicking
-		for (int i = 2; i <= 3; i++) {
+		for (int i = 2; i <= 27; i++) {
 			cp.clickOnAlphabetsByInput(i);
 			
 			// Getting the total number of companies listed
